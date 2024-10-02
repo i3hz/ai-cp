@@ -1,4 +1,4 @@
-                                      # Graph Traversing #
+# Graph Traversing #
 from tkinter import *
 import time
 
@@ -39,71 +39,47 @@ class GraphTraversal:
             self.total_circle.append(i)
 
         self.total_circle[0] = self.make_canvas.create_oval(80,250,110,280,width=3)
-
         self.total_circle[1] = self.make_canvas.create_oval(160, 180, 190, 210, width=3)
-
         self.total_circle[2] = self.make_canvas.create_oval(160, 320, 190, 350, width=3)
-
         self.total_circle[3] = self.make_canvas.create_oval(230, 130, 260, 160, width=3)
-
         self.total_circle[4] = self.make_canvas.create_oval(230, 230, 260, 260, width=3)
-
         self.total_circle[5] = self.make_canvas.create_oval(230, 270, 260, 300, width=3)
-
         self.total_circle[6] = self.make_canvas.create_oval(230, 370, 260, 400, width=3)
-
         self.total_circle[7] = self.make_canvas.create_oval(280, 80, 310, 110, width=3)
-
         self.total_circle[8] = self.make_canvas.create_oval(280, 180, 310, 210, width=3)
-
         self.total_circle[9] = self.make_canvas.create_oval(280, 250, 310, 280, width=3)
-
         self.total_circle[10] = self.make_canvas.create_oval(280, 320, 310, 350, width=3)
-
         self.total_circle[11] = self.make_canvas.create_oval(280, 420, 310, 450, width=3)
-
         self.total_circle[12] = self.make_canvas.create_oval(350, 130, 380, 160, width=3)
-
         self.total_circle[13] = self.make_canvas.create_oval(350, 220, 380, 250, width=3)
-
         self.total_circle[14] = self.make_canvas.create_oval(350, 360, 380, 390, width=3)
-
         self.make_connector_up(0, 1)
         self.make_connector_down(0, 2)
         self.collector_connector(0,1,2)
-
         self.make_connector_up(1, 3)
         self.make_connector_down(1, 4)
         self.collector_connector(1, 3, 4)
-
         self.make_connector_up(2, 5)
         self.make_connector_down(2, 6)
         self.collector_connector(2, 5, 6)
-
         self.make_connector_up(3, 7)
         self.make_connector_down(3, 8)
         self.collector_connector(3, 7, 8)
-
         self.make_connector_down(4, 9)
         self.collector_connector(4, None, 9)
-
         self.make_connector_down(5, 10)
         self.collector_connector(5, None, 10)
-
         self.make_connector_down(6, 11)
         self.collector_connector(6, None, 11)
-
         self.make_connector_up(8, 12)
         self.collector_connector(8, 12, None)
-
         self.make_connector_up(9, 13)
         self.collector_connector(9, 13, None)
-
         self.make_connector_down(10, 14)
         self.collector_connector(10, None, 14)
-
         print(self.vertex_store)
-
+        
+        
     def make_connector_up(self,index1,index2):# Up node connection make
         first_coord = self.make_canvas.coords(self.total_circle[index1])# Source node coordinates
         second_coord = self.make_canvas.coords(self.total_circle[index2])# Destination node coordinates

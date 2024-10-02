@@ -1,7 +1,7 @@
 from flask import Flask, render_template, jsonify
 import time
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder="")
 
 graph = {
     0: [1, 2],
